@@ -29,10 +29,9 @@ function generateTimeline(
   const result: Period[] = [];
   let currentDate = new Date(start);
 
-  let kopradors = ["elna", "perlie", "jehd", "ernie"];
+  const kopradors = ["elna", "perlie", "jehd", "ernie"];
 
   for (let i = 0; i < sets; i++) {
-    const isNewBlock = true; // Always true since each "set" represents a 4-month period
     const harvestStart = new Date(currentDate);
     const harvestEnd = addDays(harvestStart, harvestDuration);
 

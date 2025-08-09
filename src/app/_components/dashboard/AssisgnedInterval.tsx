@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import AssignedLists from "./AssignedLists";
-import { access } from "fs";
+// import { access } from "fs";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -12,11 +12,11 @@ interface TabPanelProps {
   value: number;
 }
 
-interface IAssignedLists {
-  id: number;
-  name: string;
-  access: number;
-}
+// interface IListData {
+//   id: number;
+//   name: string;
+//   access: number;
+// }
 
 function CustomTabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
@@ -44,12 +44,12 @@ function a11yProps(index: number) {
 const AssisgnedInterval = () => {
   const [value, setValue] = useState(0);
 
-  const listData = [
-    { id: 1, name: "Elna", access: 2 },
-    { id: 2, name: "Jed", access: 2 },
-    { id: 3, name: "Perlie", access: 2 },
-    { id: 4, name: "Ernie", access: 1 },
-  ];
+  // const listData: IListData[] = [
+  //   { id: 1, name: "Elna", access: 2 },
+  //   { id: 2, name: "Jed", access: 2 },
+  //   { id: 3, name: "Perlie", access: 2 },
+  //   { id: 4, name: "Ernie", access: 1 },
+  // ];
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -70,11 +70,11 @@ const AssisgnedInterval = () => {
       </Box>
       <CustomTabPanel value={value} index={0}>
         Baybay
-        <AssignedLists listData={listData} />
+        <AssignedLists />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
         Bukid
-        <AssignedLists listData={listData} />
+        <AssignedLists />
       </CustomTabPanel>
       {/* <CustomTabPanel value={value} index={2}>
         Item Three

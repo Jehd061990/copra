@@ -2,17 +2,17 @@ import React from "react";
 
 import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 
-interface IAssigneData {
-  id: number;
-  name: string;
-  access: number;
-}
+// interface IAssigneData {
+//   id: number;
+//   name: string;
+//   access: number;
+// }
 
-interface IAssignedLists {
-  listData: IAssigneData[];
-}
+// interface IAssignedLists {
+//   listData: IAssigneData[];
+// }
 
-const AssignedLists = ({ listData }: IAssignedLists) => {
+const AssignedLists = () => {
   return (
     <Box>
       <Typography>Assigned Interval</Typography>
